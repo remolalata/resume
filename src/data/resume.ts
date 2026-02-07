@@ -29,7 +29,24 @@ export type SkillGroup = {
   items: string[]
 }
 
-export const profile = {
+export type Profile = {
+  name: string
+  role: string
+  headline: string
+  summary: string
+  location: string
+  phone: string
+  email: string
+  linkedin: string
+  resumeUrl: string
+}
+
+export type NavLink = {
+  href: string
+  label: string
+}
+
+export const profile: Profile = {
   name: 'Remo Antonio Lalata',
   role: 'Frontend Developer',
   headline: 'Building scalable, accessible, and high-performing web experiences for modern teams.',
@@ -42,7 +59,7 @@ export const profile = {
   resumeUrl: '/remo-antonio-lalata.pdf',
 }
 
-export const navLinks = [
+export const navLinks: NavLink[] = [
   { href: '#about', label: 'About' },
   { href: '#skills', label: 'Skills' },
   { href: '#experience', label: 'Experience' },

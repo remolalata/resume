@@ -1,7 +1,7 @@
-import type { profile as profileData } from '../data/resume'
+import type { Profile } from '../data/resume'
 
 type FooterProps = {
-  profile: typeof profileData
+  profile: Profile
 }
 
 function Footer({ profile }: FooterProps) {

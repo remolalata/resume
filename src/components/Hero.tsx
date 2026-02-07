@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
-import type { navLinks as navLinksData, profile as profileData } from '../data/resume'
+import type { NavLink, Profile } from '../data/resume'
 
 type HeroProps = {
-  profile: typeof profileData
-  navLinks: typeof navLinksData
+  profile: Profile
+  navLinks: NavLink[]
 }
 
 function Hero({ profile, navLinks }: HeroProps) {
