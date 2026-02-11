@@ -10,7 +10,7 @@ function ReferencesSection({ references }: ReferencesSectionProps) {
     <section className="py-16" id="references">
       <SectionHeader
         title="References"
-        subtitle="Available upon request or contact directly."
+        subtitle="Available upon request."
       />
       <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
         {references.map((ref) => (
@@ -21,7 +21,6 @@ function ReferencesSection({ references }: ReferencesSectionProps) {
             <h3 className="text-lg font-semibold text-slate-900">{ref.name}</h3>
             <p className="text-sm text-cyan-700">{ref.company}</p>
             <p className="text-sm text-slate-600">{ref.role}</p>
-            <p className="mt-3 text-sm font-semibold text-slate-900">{ref.contact}</p>
           </article>
         ))}
       </div>

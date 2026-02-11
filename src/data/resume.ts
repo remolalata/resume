@@ -22,7 +22,6 @@ export type ReferenceItem = {
   name: string
   company: string
   role: string
-  contact: string
 }
 
 export type SkillGroup = {
@@ -215,18 +214,15 @@ export const references: ReferenceItem[] = [
     name: 'Jonas Diego',
     company: 'NCH Customer Support Service',
     role: 'Studio Manager',
-    contact: '+63 917 827 2489',
   },
   {
     name: 'Maria Grigorova',
     company: 'NCH Customer Support Service',
     role: 'CX Manager',
-    contact: 'margrigorova@gmail.com',
   },
   {
     name: 'Anthony Mapes',
     company: 'Travelex',
     role: 'Product Manager',
-    contact: '+44 7545 328931',
   },
 ]

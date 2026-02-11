@@ -10,7 +10,6 @@ describe('ReferencesSection', () => {
     for (const reference of references) {
       expect(screen.getByRole('heading', { name: reference.name })).toBeInTheDocument()
       expect(screen.getByText(reference.role)).toBeInTheDocument()
-      expect(screen.getByText(reference.contact)).toBeInTheDocument()
     }
 
     for (const company of [...new Set(references.map((item) => item.company))]) {
