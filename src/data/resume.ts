@@ -1,6 +1,7 @@
 import coworkImage from '../assets/images/projects/cowork.png'
 import shopCoImage from '../assets/images/projects/shop.co.png'
 import imageGalleryView from '../assets/images/projects/image-gallery-view.png'
+import pokedexImage from '../assets/images/projects/pokedex.png'
 
 export type ExperienceItem = {
   company: string
@@ -151,6 +152,20 @@ export const experience: ExperienceItem[] = [
 ]
 
 export const projects: ProjectItem[] = [
+  {
+    name: 'Pokedex',
+    description:
+      'Built a responsive Pokedex web app using Next.js, React, TypeScript, Tailwind CSS, and PokeAPI. Implemented hybrid rendering, localized routes with next-intl, dynamic Pokemon detail pages, and tested core UI and hooks with Vitest + Testing Library.',
+    tags: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'next-intl', 'Vitest', 'PokeAPI'],
+    links: [
+      { label: 'Live Demo', href: 'https://pokedex-two-beta-99.vercel.app/' },
+      { label: 'GitHub Repo', href: 'https://github.com/remolalata/pokedex' },
+    ],
+    image: {
+      src: pokedexImage,
+      alt: 'Pokedex app interface screenshot',
+    },
+  },
   {
     name: 'CoWork Community Web App',
     description:

@@ -1,3 +1,4 @@
+import { useMemo, useState } from 'react'
 import type { ProjectItem } from '../data/resume'
 
 type ProjectCardProps = {
@@ -5,8 +6,11 @@ type ProjectCardProps = {
 }
 
 function ProjectCard({ project }: ProjectCardProps) {
+  const [expanded, setExpanded] = useState(false)
+  const canToggleDescription = useMemo(() => project.description.length > 170, [project.description])
+
   return (
-    <article className="flex min-w-[300px] flex-1 flex-col justify-between rounded-2xl border border-slate-200/70 bg-white/90 p-5 shadow-lg shadow-slate-200/70 sm:min-w-[380px] lg:min-w-[420px]">
+    <article className="flex min-w-[300px] flex-1 snap-start shrink-0 flex-col justify-between rounded-2xl border border-slate-200/70 bg-white/90 p-5 shadow-lg shadow-slate-200/70 sm:min-w-[380px] lg:min-w-[420px]">
       {project.image ? (
         <div className="mb-4 overflow-hidden rounded-2xl border border-slate-200/70">
           <img
@@ -19,7 +23,33 @@ function ProjectCard({ project }: ProjectCardProps) {
       ) : null}
       <div>
         <h3 className="text-lg font-semibold text-slate-900">{project.name}</h3>
-        <p className="mt-2 text-sm text-slate-600">{project.description}</p>
+        <div className="mt-2 min-h-[5rem]">
+          <p
+            className="text-sm leading-6 text-slate-600"
+            style={
+              !expanded
+                ? {
+                    display: '-webkit-box',
+                    WebkitLineClamp: 3,
+                    WebkitBoxOrient: 'vertical',
+                    overflow: 'hidden',
+                  }
+                : undefined
+            }
+          >
+            {project.description}
+          </p>
+          {canToggleDescription ? (
+            <button
+              className="mt-2 text-xs font-semibold text-cyan-700 transition hover:text-cyan-900"
+              type="button"
+              aria-expanded={expanded}
+              onClick={() => setExpanded((prev) => !prev)}
+            >
+              {expanded ? 'See less' : 'See more'}
+            </button>
+          ) : null}
+        </div>
       </div>
       <div className="mt-4 flex flex-wrap gap-2">
         {project.tags.map((tag) => (

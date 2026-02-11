@@ -7,6 +7,8 @@ describe('ProjectsSection', () => {
     render(<ProjectsSection projects={projects} />)
 
     expect(screen.getByRole('heading', { name: 'Personal Projects' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Previous projects' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Next projects' })).toBeInTheDocument()
     for (const project of projects) {
       expect(screen.getByRole('heading', { name: project.name })).toBeInTheDocument()
     }

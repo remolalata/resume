@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import ProjectCard from '../ProjectCard'
 import { projects } from '../../data/resume'
 
@@ -33,5 +33,22 @@ describe('ProjectCard', () => {
     )
 
     expect(screen.queryByRole('img')).not.toBeInTheDocument()
+  })
+
+  it('supports see more and see less for long descriptions', () => {
+    const longProject = {
+      name: 'Long Description Project',
+      description:
+        'This is a long description for a project that is intentionally verbose so the component can show the see more toggle and then expand the content when requested by the user interaction in the slider card layout.',
+      tags: ['React'],
+      links: [{ label: 'GitHub Repo', href: 'https://example.com' }],
+    }
+
+    render(<ProjectCard project={longProject} />)
+
+    const toggle = screen.getByRole('button', { name: 'See more' })
+    expect(toggle).toHaveAttribute('aria-expanded', 'false')
+    fireEvent.click(toggle)
+    expect(screen.getByRole('button', { name: 'See less' })).toHaveAttribute('aria-expanded', 'true')
   })
 })
