@@ -2,9 +2,8 @@ import Hero from './components/Hero'
 import SkillsSection from './components/SkillsSection'
 import ExperienceSection from './components/ExperienceSection'
 import ProjectsSection from './components/ProjectsSection'
-import ReferencesSection from './components/ReferencesSection'
 import Footer from './components/Footer'
-import { experience, navLinks, profile, projects, references, skills } from './data/resume'
+import { experience, navLinks, profile, projects, skills } from './data/resume'
 
 function App() {
   return (
@@ -14,7 +13,6 @@ function App() {
         <SkillsSection skills={skills} />
         <ExperienceSection items={experience} />
         <ProjectsSection projects={projects} />
-        <ReferencesSection references={references} />
       </main>
       <Footer profile={profile} />
     </div>

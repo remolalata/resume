@@ -18,12 +18,6 @@ export type ProjectItem = {
   image?: { src: string; alt: string }
 }
 
-export type ReferenceItem = {
-  name: string
-  company: string
-  role: string
-}
-
 export type SkillGroup = {
   title: string
   items: string[]
@@ -64,7 +58,6 @@ export const navLinks: NavLink[] = [
   { href: '#skills', label: 'Skills' },
   { href: '#experience', label: 'Experience' },
   { href: '#projects', label: 'Projects' },
-  { href: '#references', label: 'References' },
   { href: '#contact', label: 'Contact' },
 ]
 
@@ -206,23 +199,5 @@ export const projects: ProjectItem[] = [
       src: imageGalleryView,
       alt: 'Image Gallery Viewer masonry gallery interface',
     },
-  },
-]
-
-export const references: ReferenceItem[] = [
-  {
-    name: 'Jonas Diego',
-    company: 'NCH Customer Support Service',
-    role: 'Studio Manager',
-  },
-  {
-    name: 'Maria Grigorova',
-    company: 'NCH Customer Support Service',
-    role: 'CX Manager',
-  },
-  {
-    name: 'Anthony Mapes',
-    company: 'Travelex',
-    role: 'Product Manager',
   },
 ]

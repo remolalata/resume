@@ -87,7 +87,7 @@ function Hero({ profile, navLinks }: HeroProps) {
           aria-label="Mobile navigation"
         >
           <div className="flex items-center justify-between">
-            <span className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-400">
+            <span className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-600">
               Menu
             </span>
             <button
@@ -177,19 +177,19 @@ function Hero({ profile, navLinks }: HeroProps) {
           <div className="rounded-3xl border border-slate-200/70 bg-white/80 p-6 shadow-2xl shadow-slate-200/60 backdrop-blur">
             <div className="grid gap-4 text-sm">
               <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-slate-400">Location</p>
+                <p className="text-xs uppercase tracking-[0.3em] text-slate-600">Location</p>
                 <p className="text-base text-slate-900">{profile.location}</p>
               </div>
               <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-slate-400">Phone</p>
+                <p className="text-xs uppercase tracking-[0.3em] text-slate-600">Phone</p>
                 <p className="text-base text-slate-900">{profile.phone}</p>
               </div>
               <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-slate-400">Email</p>
+                <p className="text-xs uppercase tracking-[0.3em] text-slate-600">Email</p>
                 <p className="text-base text-slate-900">{profile.email}</p>
               </div>
               <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-slate-400">LinkedIn</p>
+                <p className="text-xs uppercase tracking-[0.3em] text-slate-600">LinkedIn</p>
                 <a
                   className="text-base text-cyan-700 hover:text-cyan-600"
                   href={profile.linkedin}

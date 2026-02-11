@@ -148,8 +148,7 @@
 }
 
 .skills-grid,
-.projects-grid,
-.references-grid {
+.projects-grid {
   display: grid;
   gap: 20px;
 }
@@ -160,10 +159,6 @@
 
 .projects-grid {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-}
-
-.references-grid {
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
 .card {

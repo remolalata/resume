@@ -1,4 +1,4 @@
-import { experience, navLinks, profile, projects, references, skills } from '../resume'
+import { experience, navLinks, profile, projects, skills } from '../resume'
 
 describe('resume data', () => {
   it('contains required profile fields', () => {
@@ -13,7 +13,6 @@ describe('resume data', () => {
     expect(skills.length).toBeGreaterThan(0)
     expect(experience.length).toBeGreaterThan(0)
     expect(projects.length).toBeGreaterThan(0)
-    expect(references.length).toBeGreaterThan(0)
   })
 
   it('ensures project links use https', () => {
