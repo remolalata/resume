@@ -2,6 +2,7 @@ import coworkImage from '../assets/images/projects/cowork.png'
 import shopCoImage from '../assets/images/projects/shop.co.png'
 import imageGalleryView from '../assets/images/projects/image-gallery-view.png'
 import pokedexImage from '../assets/images/projects/pokedex.png'
+import travelToursImage from '../assets/images/projects/travel-tours.png'
 
 export type ExperienceItem = {
   company: string
@@ -144,6 +145,17 @@ export const experience: ExperienceItem[] = [
 ]
 
 export const projects: ProjectItem[] = [
+  {
+    name: 'Travel & Tours',
+    description:
+      'Travel booking platform with a customer-facing experience and an admin dashboard for day-to-day operations. Users can explore tours, request custom quotes, manage bookings, and complete online payments, while admins manage tours, bookings, destinations, quote requests, and help center content in one place.',
+    tags: ['Next.js', 'React', 'TypeScript', 'Supabase', 'MUI'],
+    links: [{ label: 'Live Demo', href: 'https://travel-tours-two.vercel.app/' }],
+    image: {
+      src: travelToursImage,
+      alt: 'Travel & Tours booking platform screenshot',
+    },
+  },
   {
     name: 'Pokedex',
     description:
