@@ -174,24 +174,24 @@ function Hero({ profile, navLinks }: HeroProps) {
             </div>
           </div>
 
-          <div className="rounded-3xl border border-slate-200/70 bg-white/80 p-6 shadow-2xl shadow-slate-200/60 backdrop-blur">
+          <div className="h-fit self-start rounded-3xl border border-slate-200/70 bg-white/80 p-6 shadow-2xl shadow-slate-200/60 backdrop-blur lg:self-center lg:p-8">
             <div className="grid gap-4 text-sm">
-              <div>
+              <div className="min-w-0">
                 <p className="text-xs uppercase tracking-[0.3em] text-slate-600">Location</p>
-                <p className="text-base text-slate-900">{profile.location}</p>
+                <p className="break-words text-base text-slate-900">{profile.location}</p>
               </div>
-              <div>
+              <div className="min-w-0">
                 <p className="text-xs uppercase tracking-[0.3em] text-slate-600">Phone</p>
-                <p className="text-base text-slate-900">{profile.phone}</p>
+                <p className="break-words text-base text-slate-900">{profile.phone}</p>
               </div>
-              <div>
+              <div className="min-w-0">
                 <p className="text-xs uppercase tracking-[0.3em] text-slate-600">Email</p>
-                <p className="text-base text-slate-900">{profile.email}</p>
+                <p className="break-words text-base text-slate-900">{profile.email}</p>
               </div>
-              <div>
+              <div className="min-w-0">
                 <p className="text-xs uppercase tracking-[0.3em] text-slate-600">LinkedIn</p>
                 <a
-                  className="text-base text-cyan-700 hover:text-cyan-600"
+                  className="break-words text-base text-cyan-700 hover:text-cyan-600"
                   href={profile.linkedin}
                   target="_blank"
                   rel="noreferrer"

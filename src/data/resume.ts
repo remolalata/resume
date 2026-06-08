@@ -2,6 +2,7 @@ import coworkImage from '../assets/images/projects/cowork.png'
 import shopCoImage from '../assets/images/projects/shop.co.png'
 import imageGalleryView from '../assets/images/projects/image-gallery-view.png'
 import pokedexImage from '../assets/images/projects/pokedex.png'
+import pearlRemoteImage from '../assets/images/projects/pearl-remote.png'
 import travelToursImage from '../assets/images/projects/travel-tours.png'
 
 export type ExperienceItem = {
@@ -46,7 +47,7 @@ export const profile: Profile = {
   role: 'Frontend Developer',
   headline: 'Building scalable, accessible, and high-performing web experiences for modern teams.',
   summary:
-    'Frontend Developer with 8+ years of experience creating scalable, high-performing, and accessible web applications. Proficient in React, JavaScript, and A/B testing, with a demonstrated ability to optimize performance and ensure compliance with accessibility standards.',
+    'Frontend Engineer with extensive experience building scalable, accessible, and high-performing web applications. Skilled in React, TypeScript, JavaScript, and frontend architecture, with a strong track record in modernizing legacy platforms, improving user experience, and driving results through A/B testing and performance optimization.',
   location: 'Manaoag, Pangasinan',
   phone: '+63 906 356 2650',
   email: 'lalata.remo@gmail.com',
@@ -95,9 +96,9 @@ export const experience: ExperienceItem[] = [
     role: 'Frontend Developer',
     dates: 'Feb 2025 - Present',
     bullets: [
-      'Led full-cycle development as the sole developer, owning feature design, implementation, and deployment.',
-      'Designed and implemented new UX/UI strategies to improve user experience and interface consistency.',
-      'Developed and maintained scalable front-end features using React, TypeScript, and Ant Design.',
+      'Owned frontend development for a SaaS business intelligence platform, from feature planning to deployment.',
+      'Built scalable reporting and data visualization interfaces using React, TypeScript, Ant Design, and charting tools.',
+      'Improved usability through consistent UI/UX design and support for AIpowered reporting features.',
     ],
   },
   {
@@ -145,6 +146,17 @@ export const experience: ExperienceItem[] = [
 ]
 
 export const projects: ProjectItem[] = [
+  {
+    name: 'Pearl Remote',
+    description:
+      'Agency website for a Philippines-based virtual assistant staffing service, built from Figma designs into a responsive marketing experience with clear service messaging and conversion-focused sections.',
+    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Figma'],
+    links: [{ label: 'Live Demo', href: 'https://www.pearlremote.com/' }],
+    image: {
+      src: pearlRemoteImage,
+      alt: 'Pearl Remote agency website screenshot',
+    },
+  },
   {
     name: 'Travel & Tours',
     description:
